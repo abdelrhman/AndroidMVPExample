@@ -1,4 +1,4 @@
-package com.podo.mybaseapp;
+package com.podo.mybaseapp.ui;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.podo.mybaseapp.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
