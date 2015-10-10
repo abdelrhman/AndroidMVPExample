@@ -16,12 +16,11 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 
 public class SplashActivity extends BaseActivity {
 
 
-    @Bind(R.id.etUsername)
-    EditText etUsername;
     @Bind(R.id.btnShowRepositories)
     Button btnShowRepositories;
     @Bind(R.id.pbLoading)
@@ -37,6 +36,12 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+    }
+
+    @OnTextChanged(R.id.etUsername)
+    public void etUsernameOnTextChanged(CharSequence text){
+        presenter.setUsername(text.toString());
     }
 
     @OnClick(R.id.btnShowRepositories)
