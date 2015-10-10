@@ -2,6 +2,8 @@ package com.podo.mybaseapp;
 
 import android.app.Application;
 
+import com.podo.mybaseapp.utils.Validator;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -23,5 +25,10 @@ public class AppModule {
     @Singleton
     public Application provideApplication(){return application;}
 
+    @Provides
+    @Singleton
+    public Validator provideValidator(){
+        return new Validator();
+    }
 
 }

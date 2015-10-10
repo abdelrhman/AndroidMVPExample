@@ -3,6 +3,7 @@ package com.podo.mybaseapp.ui.activity.di.module;
 import com.podo.mybaseapp.ui.activity.SplashActivity;
 import com.podo.mybaseapp.ui.activity.di.ActivityScope;
 import com.podo.mybaseapp.ui.activity.presenter.SplashActivityPresenter;
+import com.podo.mybaseapp.utils.Validator;
 
 import dagger.Module;
 import dagger.Provides;
@@ -24,8 +25,8 @@ public class SplashActivityModule {
 
     @Provides
     @ActivityScope
-    SplashActivityPresenter provideSplashActivityPresenter(){
-        return new SplashActivityPresenter();
+    SplashActivityPresenter provideSplashActivityPresenter(Validator validator){
+        return new SplashActivityPresenter(splashActivity,validator);
     }
 
 }

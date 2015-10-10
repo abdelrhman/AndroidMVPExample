@@ -21,6 +21,8 @@ import butterknife.OnTextChanged;
 public class SplashActivity extends BaseActivity {
 
 
+    @Bind(R.id.etUsername)
+    EditText etUsername;
     @Bind(R.id.btnShowRepositories)
     Button btnShowRepositories;
     @Bind(R.id.pbLoading)
@@ -57,5 +59,9 @@ public class SplashActivity extends BaseActivity {
     public void showLoading(boolean loading) {
         btnShowRepositories.setVisibility(loading ? View.GONE : View.VISIBLE);
         pbLoading.setVisibility(loading ? View.VISIBLE : View.GONE);
+    }
+
+    public void showValidationError(){
+        etUsername.setError("Error");
     }
 }
