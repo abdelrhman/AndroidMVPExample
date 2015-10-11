@@ -1,5 +1,6 @@
 package com.podo.mybaseapp;
 
+import com.podo.mybaseapp.data.GithubApiModule;
 import com.podo.mybaseapp.ui.activity.di.component.SplashActivityComponent;
 import com.podo.mybaseapp.ui.activity.di.module.SplashActivityModule;
 
@@ -13,7 +14,8 @@ import dagger.Component;
 @Singleton
 @Component(
         modules = {
-                AppModule.class
+                AppModule.class,
+                GithubApiModule.class
         }
 )
 public interface AppComponent {

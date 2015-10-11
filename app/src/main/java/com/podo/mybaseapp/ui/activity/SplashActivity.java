@@ -43,11 +43,13 @@ public class SplashActivity extends BaseActivity {
 
     @OnTextChanged(R.id.etUsername)
     public void etUsernameOnTextChanged(CharSequence text){
+        etUsername.setError(null);
         presenter.setUsername(text.toString());
     }
 
     @OnClick(R.id.btnShowRepositories)
     public void onShowRepositoriesClick() {
+        etUsername.setError(null);
         presenter.onShowRepositoriesClick();
     }
 

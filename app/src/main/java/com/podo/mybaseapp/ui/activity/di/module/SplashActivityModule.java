@@ -1,5 +1,6 @@
 package com.podo.mybaseapp.ui.activity.di.module;
 
+import com.podo.mybaseapp.data.UserManager;
 import com.podo.mybaseapp.ui.activity.SplashActivity;
 import com.podo.mybaseapp.ui.activity.di.ActivityScope;
 import com.podo.mybaseapp.ui.activity.presenter.SplashActivityPresenter;
@@ -25,8 +26,8 @@ public class SplashActivityModule {
 
     @Provides
     @ActivityScope
-    SplashActivityPresenter provideSplashActivityPresenter(Validator validator){
-        return new SplashActivityPresenter(splashActivity,validator);
+    SplashActivityPresenter provideSplashActivityPresenter(Validator validator,UserManager userManager){
+        return new SplashActivityPresenter(splashActivity,validator,userManager);
     }
 
 }
